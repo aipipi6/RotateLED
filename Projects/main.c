@@ -16,7 +16,7 @@ int main(void)
 	USART1_Config(115200 * 4);    // 蓝牙串口设置
 	USART3_Config(115200);    // 日志串口设置		
 	
-	AT24CXX_Init();
+//	AT24CXX_Init();
 
 	delay_ms(1000);
 	LOG("RotateLED start\r\n");

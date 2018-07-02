@@ -2,7 +2,7 @@
 .\objects\common_utils.o: ..\APP\common\common_utils.h
 .\objects\common_utils.o: ..\STM32F10x_lib\CMSIS\stm32f10x.h
 .\objects\common_utils.o: ..\STM32F10x_lib\CMSIS\core_cm3.h
-.\objects\common_utils.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\common_utils.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\common_utils.o: ..\STM32F10x_lib\CMSIS\system_stm32f10x.h
 .\objects\common_utils.o: ..\Projects\stm32f10x_conf.h
 .\objects\common_utils.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_can.h
@@ -12,6 +12,6 @@
 .\objects\common_utils.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_tim.h
 .\objects\common_utils.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_usart.h
 .\objects\common_utils.o: ..\STM32F10x_lib\FWLib\inc\misc.h
-.\objects\common_utils.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\common_utils.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\objects\common_utils.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\common_utils.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\common_utils.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\common_utils.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
