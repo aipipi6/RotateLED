@@ -20,7 +20,7 @@ int main(void)
 	
 	while(1)
 	{
-parser_uart_msg();
+		parser_uart_msg();
 	}
 }
 
