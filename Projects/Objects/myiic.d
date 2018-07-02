@@ -1,0 +1,16 @@
+.\objects\myiic.o: ..\Drivers\Device\IIC\myiic.c
+.\objects\myiic.o: ..\Drivers\Device\IIC\myiic.h
+.\objects\myiic.o: ..\SYSTEM\sys\sys.h
+.\objects\myiic.o: ..\STM32F10x_lib\CMSIS\stm32f10x.h
+.\objects\myiic.o: ..\STM32F10x_lib\CMSIS\core_cm3.h
+.\objects\myiic.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\myiic.o: ..\STM32F10x_lib\CMSIS\system_stm32f10x.h
+.\objects\myiic.o: ..\Projects\stm32f10x_conf.h
+.\objects\myiic.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_can.h
+.\objects\myiic.o: ..\STM32F10x_lib\CMSIS\stm32f10x.h
+.\objects\myiic.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_gpio.h
+.\objects\myiic.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_rcc.h
+.\objects\myiic.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_tim.h
+.\objects\myiic.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_usart.h
+.\objects\myiic.o: ..\STM32F10x_lib\FWLib\inc\misc.h
+.\objects\myiic.o: ..\SYSTEM\delay\delay.h

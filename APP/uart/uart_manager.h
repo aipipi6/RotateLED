@@ -3,7 +3,6 @@
 
 #include "gpio.h"
 #include "usart.h"
-#include "can.h"
 #include "timer.h"
 #include "common_utils.h"
 

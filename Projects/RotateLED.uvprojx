@@ -365,7 +365,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Drivers\Device\CAN;..\Drivers\Device\GPIO;..\Drivers\Device\TIM;..\Projects;..\STM32F10x_lib\CMSIS;..\STM32F10x_lib\FWLib\inc;..\Projects;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\Drivers;..\APP;..\APP\common;..\APP\uart;..\APP\msgParser;..\APP\fontUpdate</IncludePath>
+              <IncludePath>..\Drivers\Device\IIC;..\Drivers\Device\GPIO;..\Drivers\Device\TIM;..\Drivers\Device\24CXX;..\Projects;..\STM32F10x_lib\CMSIS;..\STM32F10x_lib\FWLib\inc;..\Projects;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\Drivers;..\APP;..\APP\common;..\APP\uart;..\APP\msgParser;..\APP\fontUpdate</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -487,6 +487,16 @@
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\Device\TIM\timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>myiic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\Device\IIC\myiic.c</FilePath>
+            </File>
+            <File>
+              <FileName>24cxx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\Device\24CXX\24cxx.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -3,6 +3,7 @@
 #include "common_utils.h"
 #include "uart_manager.h"
 #include "msg_parser.h"
+#include "24cxx.h"
 
 u32 main_task_flag = 0;
 int main(void)
@@ -14,6 +15,8 @@ int main(void)
 	
 	USART1_Config(115200 * 4);    // 蓝牙串口设置
 	USART3_Config(115200);    // 日志串口设置		
+	
+	AT24CXX_Init();
 
 	delay_ms(1000);
 	LOG("RotateLED start\r\n");

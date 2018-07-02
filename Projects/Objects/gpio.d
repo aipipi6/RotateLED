@@ -2,7 +2,7 @@
 .\objects\gpio.o: ..\Drivers\Device\GPIO\gpio.h
 .\objects\gpio.o: ..\STM32F10x_lib\CMSIS\stm32f10x.h
 .\objects\gpio.o: ..\STM32F10x_lib\CMSIS\core_cm3.h
-.\objects\gpio.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\gpio.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\gpio.o: ..\STM32F10x_lib\CMSIS\system_stm32f10x.h
 .\objects\gpio.o: ..\Projects\stm32f10x_conf.h
 .\objects\gpio.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_can.h

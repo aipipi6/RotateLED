@@ -12,6 +12,8 @@
 ".\objects\stm32f10x_can.o"
 ".\objects\gpio.o"
 ".\objects\timer.o"
+".\objects\myiic.o"
+".\objects\24cxx.o"
 ".\objects\usart.o"
 ".\objects\sys.o"
 ".\objects\delay.o"
