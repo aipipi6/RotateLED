@@ -35,6 +35,8 @@ int main(void)
 	read_font();
 	LOG("read %d bytes over\r\n", fontLen);
 
+	log_array(fontBuffer, fontLen);
+	
 	LOG("RotateLED start\r\n");
 	while(1)
 	{
