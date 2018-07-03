@@ -48,3 +48,9 @@ u8 update_font(u8 len, u8 *fontData)
 	return 1;
 }
 
+void update_color(u8 color) 
+{
+	AT24CXX_WriteOneByte(FONT_COLOR_ADDR, color);
+	fontColor = color;
+}
+

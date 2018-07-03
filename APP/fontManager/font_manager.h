@@ -27,4 +27,5 @@ extern u8 	fontColor;
 
 u8 read_font(void);
 u8 update_font(u8 len, u8 *fontData);
+void update_color(u8 color) ;
 #endif

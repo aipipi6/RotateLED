@@ -8,9 +8,7 @@
 #define CMD_FONT_UPDATE 	0x01
 #define ACK_FONT_UPDATE 	0x11
 
-#define CMD_COLOR_BLUE		0x02
-#define CMD_COLOR_RED		0x03
-#define CMD_COLOR_DOUBLE	0x04
+#define CMD_COLOR_UPDATE		0x02
 
 typedef struct {
 	u16 	startTag;

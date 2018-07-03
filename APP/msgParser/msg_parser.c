@@ -52,19 +52,11 @@ u8 parser_uart_msg()
 			
 			switch(header->cmdType) {
 				case CMD_FONT_UPDATE:
-					LOG("--------------\r\n");
-						update_font(header->len, (u8 *)&parser_msg_cache_buff[offset + sizeof(Msg_Header_t)]);
-				//log_array((u8 *)header, sizeof(Msg_Header_t) + header->len);
-					LOG("--------------\r\n");
+					update_font(header->len, (u8 *)&parser_msg_cache_buff[offset + sizeof(Msg_Header_t)]);
 					break;
 				
-				case CMD_COLOR_BLUE:
-					break;
-				
-				case CMD_COLOR_RED:
-					break;
-				
-				case CMD_COLOR_DOUBLE:
+				case CMD_COLOR_UPDATE:
+					update_color(parser_msg_cache_buff[offset + sizeof(Msg_Header_t)]);
 					break;
 				
 				default:
