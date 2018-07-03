@@ -1,5 +1,5 @@
 #include "msg_parser.h"
-#include "font_update.h"
+#include "font_manager.h"
 #include "uart_manager.h"
 
 #define PARSER_MSG_CACHE_SIZE 512

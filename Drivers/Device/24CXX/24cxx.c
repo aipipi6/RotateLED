@@ -32,7 +32,7 @@ u8 AT24CXX_ReadOneByte(u16 ReadAddr)
 		IIC_Send_Byte(0XA0);	   //发送写命令
 		IIC_Wait_Ack();
 		IIC_Send_Byte(ReadAddr>>8);//发送高地址
-		IIC_Wait_Ack();		 
+//		IIC_Wait_Ack();		 
 	}else IIC_Send_Byte(0XA0+((ReadAddr/256)<<1));   //发送器件地址0XA0,写数据 	 
 
 	IIC_Wait_Ack(); 
@@ -101,20 +101,20 @@ u32 AT24CXX_ReadLenByte(u16 ReadAddr,u8 Len)
 //检查AT24CXX是否正常
 //这里用了24XX的最后一个地址(255)来存储标志字.
 //如果用其他24C系列,这个地址要修改
-//返回1:检测失败
-//返回0:检测成功
+//返回0:检测失败
+//返回1:检测成功
 u8 AT24CXX_Check(void)
 {
 	u8 temp;
-	temp=AT24CXX_ReadOneByte(255);//避免每次开机都写AT24CXX			   
-	if(temp==0X55)return 0;		   
+	temp=AT24CXX_ReadOneByte(EE_MAX_ADDR);//避免每次开机都写AT24CXX			   
+	if(temp==0X55)return 1;		   
 	else//排除第一次初始化的情况
 	{
-		AT24CXX_WriteOneByte(255,0X55);
-	    temp=AT24CXX_ReadOneByte(255);	  
-		if(temp==0X55)return 0;
+		AT24CXX_WriteOneByte(EE_MAX_ADDR, 0X55);
+	    temp = AT24CXX_ReadOneByte(EE_MAX_ADDR);	  
+		if(temp == 0X55)return 1;
 	}
-	return 1;											  
+	return 0;											  
 }
 
 //在AT24CXX里面的指定地址开始读出指定个数的数据
@@ -141,6 +141,81 @@ void AT24CXX_Write(u16 WriteAddr,u8 *pBuffer,u16 NumToWrite)
 		WriteAddr++;
 		pBuffer++;
 	}
+}
+
+void AT24CXX_Continuous_Write(u16 WriteAddr, u8 *pBuffer, u8 NumToWrite)
+{
+	u16 i;
+	IIC_Start();  
+	if(EE_TYPE>AT24C16)
+	{
+		IIC_Send_Byte(0XA0);	    //发送写命令
+		IIC_Wait_Ack();
+		IIC_Send_Byte(WriteAddr>>8);//发送高地址
+ 	}else
+	{
+		IIC_Send_Byte(0XA0+((WriteAddr/256)<<1));   //发送器件地址0XA0,写数据 
+	}	 
+	IIC_Wait_Ack();	   
+    IIC_Send_Byte(WriteAddr%256);   //发送低地址
+	IIC_Wait_Ack(); 
+	for(i = 0; i < NumToWrite; i++) {
+		IIC_Send_Byte(pBuffer[i]);     //发送字节							   
+		IIC_Wait_Ack();  		    	   
+	}
+    IIC_Stop();//产生一个停止条件 
+	delay_ms(10);	 
+}
+
+void AT24CXX_WriteBytes(u16 WriteAddr, u8 *pBuffer, u16 NumToWrite)
+{
+	u8   write_len,page_offset;
+//	char error = 0;
+//	u16  check_writes,check_addr;
+//	u8 	*check_buf;
+
+//	check_writes= NumToWrite;
+//	check_addr  = WriteAddr;
+//	check_buf   = pBuffer;
+	
+	while(NumToWrite > 0)
+	{
+			page_offset = EE_PAGESIZE - (WriteAddr & (EE_PAGESIZE - 1));//write_current_addr%EE24CLXX_PageSize
+			write_len   = NumToWrite > page_offset ? page_offset : NumToWrite;
+			AT24CXX_Continuous_Write(WriteAddr, pBuffer, write_len);
+			NumToWrite   = NumToWrite - write_len;
+			if(NumToWrite > 0)
+			{
+					pBuffer = pBuffer + write_len;
+					WriteAddr  = WriteAddr + write_len;
+			}
+	}
+}
+
+void AT24CXX_ReadBytes(u16 ReadAddr, u8 *pBuffer, u16 NumToRead)
+{
+	u16 i;		  	    																 
+    IIC_Start();  
+	if(EE_TYPE>AT24C16)
+	{
+		IIC_Send_Byte(0XA0);	   //发送写命令
+		IIC_Wait_Ack();
+		IIC_Send_Byte(ReadAddr>>8);//发送高地址
+	//	IIC_Wait_Ack();		 
+	}else IIC_Send_Byte(0XA0+((ReadAddr/256)<<1));   //发送器件地址0XA0,写数据 	 
+
+	IIC_Wait_Ack(); 
+    IIC_Send_Byte(ReadAddr%256);   //发送低地址
+	IIC_Wait_Ack();	    
+	
+	for(i = 0; i < NumToRead; i++) {
+		IIC_Start();  	 	   
+		IIC_Send_Byte(0XA1);           //进入接收模式			   
+		IIC_Wait_Ack();	 
+		pBuffer[i] = IIC_Read_Byte(0);		   
+		IIC_Wait_Ack();	 
+	}
+    IIC_Stop();//产生一个停止条件	   
 }
  
 

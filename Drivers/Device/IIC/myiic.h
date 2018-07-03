@@ -15,13 +15,21 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 //IO方向设置
-#define SDA_IN()  {GPIOB->CRH&=0XFFFF0FFF;GPIOB->CRH|=8<<12;}
-#define SDA_OUT() {GPIOB->CRH&=0XFFFF0FFF;GPIOB->CRH|=3<<12;}
+#define SDA_IN()  						\
+	do {								\
+		GPIOC->CRH &= 0xF0FFFFFF; 		\
+		GPIOC->CRH |= 0x08000000;		\
+	} while(0)
+#define SDA_OUT() 						\
+	do {								\
+		GPIOC->CRH &= 0xF0FFFFFF; 		\
+		GPIOC->CRH |= 0x03000000;		\
+	} while(0)
 
 //IO操作函数	 
-#define IIC_SCL    PBout(10) //SCL
-#define IIC_SDA    PBout(11) //SDA	 
-#define READ_SDA   PBin(11)  //输入SDA 
+#define IIC_SCL    PCout(13) //SCL
+#define IIC_SDA    PCout(14) //SDA	 
+#define READ_SDA   PCin(14)  //输入SDA 
 
 //IIC所有操作函数
 void IIC_Init(void);                //初始化IIC的IO口				 

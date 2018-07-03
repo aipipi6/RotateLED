@@ -16,7 +16,7 @@
 .\objects\msg_parser.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\msg_parser.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\msg_parser.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\msg_parser.o: ..\APP\fontUpdate\font_update.h
+.\objects\msg_parser.o: ..\APP\fontManager\font_manager.h
 .\objects\msg_parser.o: ..\APP\uart\uart_manager.h
 .\objects\msg_parser.o: ..\Drivers\Device\GPIO\gpio.h
 .\objects\msg_parser.o: ..\SYSTEM\usart\usart.h

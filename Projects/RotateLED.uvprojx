@@ -365,7 +365,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Drivers\Device\IIC;..\Drivers\Device\GPIO;..\Drivers\Device\TIM;..\Drivers\Device\24CXX;..\Projects;..\STM32F10x_lib\CMSIS;..\STM32F10x_lib\FWLib\inc;..\Projects;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\Drivers;..\APP;..\APP\common;..\APP\uart;..\APP\msgParser;..\APP\fontUpdate</IncludePath>
+              <IncludePath>..\Drivers\Device\IIC;..\Drivers\Device\GPIO;..\Drivers\Device\TIM;..\Drivers\Device\24CXX;..\Projects;..\STM32F10x_lib\CMSIS;..\STM32F10x_lib\FWLib\inc;..\Projects;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\Drivers;..\APP;..\APP\common;..\APP\uart;..\APP\msgParser;..\APP\fontManager;..\APP\led</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -539,9 +539,14 @@
               <FilePath>..\APP\msgParser\msg_parser.c</FilePath>
             </File>
             <File>
-              <FileName>font_update.c</FileName>
+              <FileName>font_manager.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\APP\fontUpdate\font_update.c</FilePath>
+              <FilePath>..\APP\fontManager\font_manager.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\led\led.c</FilePath>
             </File>
           </Files>
         </Group>

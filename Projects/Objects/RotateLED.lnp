@@ -20,7 +20,8 @@
 ".\objects\uart_manager.o"
 ".\objects\common_utils.o"
 ".\objects\msg_parser.o"
-".\objects\font_update.o"
+".\objects\font_manager.o"
+".\objects\led.o"
 --strict --scatter ".\Objects\RotateLED.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

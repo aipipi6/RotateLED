@@ -23,5 +23,7 @@
 .\objects\main.o: ..\Drivers\Device\TIM\timer.h
 .\objects\main.o: ..\APP\type.h
 .\objects\main.o: ..\APP\msgParser\msg_parser.h
+.\objects\main.o: ..\APP\fontManager\font_manager.h
 .\objects\main.o: ..\Drivers\Device\24CXX\24cxx.h
 .\objects\main.o: ..\Drivers\Device\IIC\myiic.h
+.\objects\main.o: ..\APP\led\led.h
