@@ -25,6 +25,7 @@ extern BIT_Union8  _TimeFlag;
 #define  TimeFlag_500ms  _TimeFlag.Bits.BIT5
 #define  TimeFlag_1s     _TimeFlag.Bits.BIT6
 
+extern u32 timer_10ms;
 
 void TIM3_Int_Init(uint16_t arr,uint16_t psc);
 u8 is_time10ms(void);

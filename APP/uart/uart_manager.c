@@ -64,6 +64,15 @@ u16 get_uart_ring_buf(u8 *buf)
     return num;
 }
 
+void USART1_IRQHandler(void)                	//串口1中断服务程序
+{
+	if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)  
+	{
+		u8 data =USART_ReceiveData(USART1);//(USART1->DR);	//读取接收到的数据	
+ 		put_uart_ring_buf(data);
+    } 
+} 
+
 /*
  * 蓝牙发送 串口发送数据
  */

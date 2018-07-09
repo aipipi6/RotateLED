@@ -6,8 +6,9 @@
 .\objects\stm32f10x_can.o: ..\STM32F10x_lib\CMSIS\system_stm32f10x.h
 .\objects\stm32f10x_can.o: ..\Projects\stm32f10x_conf.h
 .\objects\stm32f10x_can.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_can.h
-.\objects\stm32f10x_can.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_gpio.h
+.\objects\stm32f10x_can.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_exti.h
 .\objects\stm32f10x_can.o: ..\STM32F10x_lib\CMSIS\stm32f10x.h
+.\objects\stm32f10x_can.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_gpio.h
 .\objects\stm32f10x_can.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_rcc.h
 .\objects\stm32f10x_can.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_tim.h
 .\objects\stm32f10x_can.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_usart.h

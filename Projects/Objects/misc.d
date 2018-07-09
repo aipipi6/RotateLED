@@ -7,6 +7,7 @@
 .\objects\misc.o: ..\Projects\stm32f10x_conf.h
 .\objects\misc.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_can.h
 .\objects\misc.o: ..\STM32F10x_lib\CMSIS\stm32f10x.h
+.\objects\misc.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_exti.h
 .\objects\misc.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_gpio.h
 .\objects\misc.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_rcc.h
 .\objects\misc.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_tim.h

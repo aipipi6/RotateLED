@@ -1,7 +1,6 @@
 #ifndef __MSG_MANAGER_H__
 #define __MSG_MANAGER_H__
 
-#include "gpio.h"
 #include "usart.h"
 #include "timer.h"
 #include "common_utils.h"

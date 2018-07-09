@@ -9,6 +9,7 @@
 .\objects\main.o: ..\Projects\stm32f10x_conf.h
 .\objects\main.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_can.h
 .\objects\main.o: ..\STM32F10x_lib\CMSIS\stm32f10x.h
+.\objects\main.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_exti.h
 .\objects\main.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_gpio.h
 .\objects\main.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_rcc.h
 .\objects\main.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_tim.h
@@ -18,7 +19,6 @@
 .\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\main.o: ..\APP\uart\uart_manager.h
-.\objects\main.o: ..\Drivers\Device\GPIO\gpio.h
 .\objects\main.o: ..\SYSTEM\usart\usart.h
 .\objects\main.o: ..\Drivers\Device\TIM\timer.h
 .\objects\main.o: ..\APP\type.h

@@ -145,24 +145,16 @@ void SysTick_Handler(void)
 /*  available peripheral interrupt handler's name please refer to the startup */
 /*  file (startup_stm32f10x_xx.s).                                            */
 /******************************************************************************/
-extern void put_uart_ring_buf(u8 data);
-void USART1_IRQHandler(void)                	//串口1中断服务程序
-{
-	if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)  
-	{
-		u8 data =USART_ReceiveData(USART1);//(USART1->DR);	//读取接收到的数据	
- 		put_uart_ring_buf(data);
-    } 
-} 
+
 //--------------------------------------------------------------------------------------------------------
 //中断服务函数		
 
-void USB_LP_CAN1_RX0_IRQHandler(void)
-{
-	CanRxMsg RxMessage;
-	
-	CAN_Receive(CAN1, CAN_FIFO0, &RxMessage);
-}
+//void USB_LP_CAN1_RX0_IRQHandler(void)
+//{
+//	CanRxMsg RxMessage;
+//	
+//	CAN_Receive(CAN1, CAN_FIFO0, &RxMessage);
+//}
 /**
   * @brief  This function handles PPP interrupt request.
   * @param  None

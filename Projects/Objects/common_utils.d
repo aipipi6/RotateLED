@@ -7,6 +7,7 @@
 .\objects\common_utils.o: ..\Projects\stm32f10x_conf.h
 .\objects\common_utils.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_can.h
 .\objects\common_utils.o: ..\STM32F10x_lib\CMSIS\stm32f10x.h
+.\objects\common_utils.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_exti.h
 .\objects\common_utils.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_gpio.h
 .\objects\common_utils.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_rcc.h
 .\objects\common_utils.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_tim.h

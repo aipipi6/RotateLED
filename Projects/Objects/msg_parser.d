@@ -8,6 +8,7 @@
 .\objects\msg_parser.o: ..\Projects\stm32f10x_conf.h
 .\objects\msg_parser.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_can.h
 .\objects\msg_parser.o: ..\STM32F10x_lib\CMSIS\stm32f10x.h
+.\objects\msg_parser.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_exti.h
 .\objects\msg_parser.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_gpio.h
 .\objects\msg_parser.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_rcc.h
 .\objects\msg_parser.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_tim.h
@@ -18,7 +19,6 @@
 .\objects\msg_parser.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\msg_parser.o: ..\APP\fontManager\font_manager.h
 .\objects\msg_parser.o: ..\APP\uart\uart_manager.h
-.\objects\msg_parser.o: ..\Drivers\Device\GPIO\gpio.h
 .\objects\msg_parser.o: ..\SYSTEM\usart\usart.h
 .\objects\msg_parser.o: ..\SYSTEM\sys\sys.h
 .\objects\msg_parser.o: ..\Drivers\Device\TIM\timer.h

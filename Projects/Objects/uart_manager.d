@@ -10,13 +10,13 @@
 .\objects\uart_manager.o: ..\Projects\stm32f10x_conf.h
 .\objects\uart_manager.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_can.h
 .\objects\uart_manager.o: ..\STM32F10x_lib\CMSIS\stm32f10x.h
+.\objects\uart_manager.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_exti.h
 .\objects\uart_manager.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_gpio.h
 .\objects\uart_manager.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_rcc.h
 .\objects\uart_manager.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_tim.h
 .\objects\uart_manager.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_usart.h
 .\objects\uart_manager.o: ..\STM32F10x_lib\FWLib\inc\misc.h
 .\objects\uart_manager.o: ..\APP\uart\uart_manager.h
-.\objects\uart_manager.o: ..\Drivers\Device\GPIO\gpio.h
 .\objects\uart_manager.o: ..\Drivers\Device\TIM\timer.h
 .\objects\uart_manager.o: ..\APP\type.h
 .\objects\uart_manager.o: ..\APP\common\common_utils.h

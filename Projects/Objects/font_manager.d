@@ -8,6 +8,7 @@
 .\objects\font_manager.o: ..\Projects\stm32f10x_conf.h
 .\objects\font_manager.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_can.h
 .\objects\font_manager.o: ..\STM32F10x_lib\CMSIS\stm32f10x.h
+.\objects\font_manager.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_exti.h
 .\objects\font_manager.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_gpio.h
 .\objects\font_manager.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_rcc.h
 .\objects\font_manager.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_tim.h
@@ -17,7 +18,6 @@
 .\objects\font_manager.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\font_manager.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\font_manager.o: ..\APP\uart\uart_manager.h
-.\objects\font_manager.o: ..\Drivers\Device\GPIO\gpio.h
 .\objects\font_manager.o: ..\SYSTEM\usart\usart.h
 .\objects\font_manager.o: ..\SYSTEM\sys\sys.h
 .\objects\font_manager.o: ..\Drivers\Device\TIM\timer.h
