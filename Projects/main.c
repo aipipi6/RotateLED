@@ -19,6 +19,8 @@
 
 int main(void)
 {			
+	u8 buff[512];
+	u8 buff1[512];
  	delay_init();	    	 // 延时函数初始化
 	
 	TIM3_Int_Init(99, 7199);     //10ms中断	
@@ -31,21 +33,26 @@ int main(void)
 	led_init();
 	delay_ms(1000);
 	
-//	LOG("AT24CXX_Check start\r\n");
-//	while(!AT24CXX_Check()) {
-//		delay_ms(100);
-//	}
-//	LOG("AT24CXX_Check over\r\n");
-//	
+	LOG("AT24CXX_Check start\r\n");
+	while(!AT24CXX_Check()) {
+		delay_ms(100);
+	}
+	LOG("AT24CXX_Check over\r\n");
+	
 //	LOG("read font start\r\n");
 //	read_font();
 //	LOG("read %d bytes over\r\n", fontLen);
+	for(int i = 0; i < sizeof(buff); i++) {
+		buff[i] = i & 0xff;
+	}
+	AT24CXX_WriteBytes(FONT_START_ADDR, buff, sizeof(buff));
+	
+	AT24CXX_ReadBytes(FONT_START_ADDR, buff1, sizeof(buff1));
+	log_array(buff1, sizeof(buff1));
 
-//	log_array(fontBuffer, fontLen);
-//	;
 	LOG("RotateLED start\r\n");
 	
-	
+	led_color(2);
 	while(1)
 	{
 		parser_uart_msg();

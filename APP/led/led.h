@@ -13,10 +13,14 @@
 #define LED3_GPIO_PINs		GPIO_PINs(8, 15)
 
 
+#define LED_COLOR_PORT 			GPIOA
+#define LED_COLOR_GPIO_PIN1		GPIO_Pin_11
+#define LED_COLOR_GPIO_PIN2		GPIO_Pin_12
 
 
 void led_init(void);
 void led_display(void);
 void led_port_set(u8 data1, u8 data2, u8 data3);
+void led_color(u8 color);
 
 #endif
