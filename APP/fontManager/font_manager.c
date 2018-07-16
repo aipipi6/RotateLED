@@ -30,7 +30,7 @@ u8 update_font(u8 len, u8 *fontData)
 	Font_Msg_t *pFontMsg = (Font_Msg_t *)fontData;
 	pFontMsg->offset = BigLittleSwap16(pFontMsg->offset);
 	
-	LOG("save font, offset:%d, index:%d/%d, len:%d\r\n", pFontMsg->offset, pFontMsg->index, pFontMsg->total, len - 4);
+//	LOG("save font, offset:%d, index:%d/%d, len:%d\r\n", pFontMsg->offset, pFontMsg->index, pFontMsg->total, len - 4);
 	AT24CXX_WriteBytes(FONT_START_ADDR + pFontMsg->offset, pFontMsg->font, len - 4);
 	memcpy(fontBuffer + pFontMsg->offset, pFontMsg->font, len - 4);
 

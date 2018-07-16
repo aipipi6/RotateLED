@@ -44,7 +44,7 @@ u8 parser_uart_msg()
 			u8 calcCrcCode = calc_crc(&parser_msg_cache_buff[offset], sizeof(Msg_Header_t) + header->len);
 			if(crcCode != calcCrcCode) {
 			
-				LOG("CRC error, read:0x%02x, calc:0x%02x\r\n", crcCode, calcCrcCode);
+//				LOG("CRC error, read:0x%02x, calc:0x%02x\r\n", crcCode, calcCrcCode);
 				log_array((u8 *)header, sizeof(Msg_Header_t) + header->len + 1);
 				offset += sizeof(Msg_Header_t) + header->len + 1;
 				break;

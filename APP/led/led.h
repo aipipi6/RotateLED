@@ -21,6 +21,8 @@
 void led_init(void);
 void led_display(void);
 void led_port_set(u8 data1, u8 data2, u8 data3);
-void led_color(u8 color);
+void led_color_set(u8 color);
+void led_color_change(void);
+void led_test(void);
 
 #endif
