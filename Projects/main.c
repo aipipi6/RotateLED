@@ -38,8 +38,8 @@ int main(void)
 	while(1)
 	{
 		parser_uart_msg();
-		// led_display();
-		led_test();
+		led_display();
+		//led_test();
 	}
 }
 

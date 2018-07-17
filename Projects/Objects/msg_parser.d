@@ -3,7 +3,7 @@
 .\objects\msg_parser.o: ..\APP\common\common_utils.h
 .\objects\msg_parser.o: ..\STM32F10x_lib\CMSIS\stm32f10x.h
 .\objects\msg_parser.o: ..\STM32F10x_lib\CMSIS\core_cm3.h
-.\objects\msg_parser.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\msg_parser.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\msg_parser.o: ..\STM32F10x_lib\CMSIS\system_stm32f10x.h
 .\objects\msg_parser.o: ..\Projects\stm32f10x_conf.h
 .\objects\msg_parser.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_can.h
@@ -14,9 +14,9 @@
 .\objects\msg_parser.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_tim.h
 .\objects\msg_parser.o: ..\STM32F10x_lib\FWLib\inc\stm32f10x_usart.h
 .\objects\msg_parser.o: ..\STM32F10x_lib\FWLib\inc\misc.h
-.\objects\msg_parser.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\msg_parser.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\objects\msg_parser.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\msg_parser.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\msg_parser.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\msg_parser.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\msg_parser.o: ..\APP\fontManager\font_manager.h
 .\objects\msg_parser.o: ..\APP\uart\uart_manager.h
 .\objects\msg_parser.o: ..\SYSTEM\usart\usart.h

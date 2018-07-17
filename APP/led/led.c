@@ -1,7 +1,7 @@
 #include "led.h"
 #include "font_manager.h"
 #include "timer.h"
-
+#include "delay.h"
 void led_color_change() 
 {
 	static u8 count = 0;
@@ -100,10 +100,10 @@ void EXTI9_5_IRQHandler(void)
 	EXTI_ClearITPendingBit(EXTI_Line8);
 }
 
-
 void led_display()
 {
 	static u16 fontOffset = 0;
+	
 	if(fontPrepareFlag == 0) {
 		return ;
 	} else if(fontPrepareFlag == 1) {
@@ -112,21 +112,22 @@ void led_display()
 	}
 	
 	if(ledShowFlag) {
-		ledShowFlag = 0;
-
-		for(u8 i = 0; i < 24 * 4; i++) {
-			
-			led_port_set(fontBuffer[fontOffset],
-						fontBuffer[fontOffset + 1],
-						fontBuffer[fontOffset + 2]);
-			fontOffset += 3;
-			
-			if(fontOffset >= fontLen) {
-				fontOffset = 0;
-				led_color_change();  // 字体颜色切换
-			}
+		for(u16 i = 0; i < 24 * 4; i++) {
+			led_port_set(~fontBuffer[i * 3 + fontOffset],
+					~fontBuffer[i * 3 + 1 + fontOffset],
+					~fontBuffer[i * 3 + 2 + fontOffset]);
+		
+			delay_us(250);
+			led_port_set(0xFF, 0xFF, 0xFF);	//消影
 		}	
+		fontOffset += 3;
+		if(fontOffset >= fontLen) {
+			fontOffset = 0;
+			//led_color_change();  // 字体颜色切换
+		}
+		ledShowFlag = 0;
 	}
+	
 
 }
 
